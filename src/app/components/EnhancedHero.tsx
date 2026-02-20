@@ -16,7 +16,7 @@ export function EnhancedHero() {
           alt="Tennis court with ocean view"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0F2430]/50 via-[#0F2430]/15 to-[#0F2430]/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0F2430]/70 via-[#0F2430]/50 to-[#0F2430]/80" />
       </motion.div>
 
       {/* Content */}
@@ -25,7 +25,7 @@ export function EnhancedHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="text-xs tracking-[6px] uppercase text-[#D4775C] mb-10 font-medium"
+          className="text-sm tracking-[6px] uppercase text-[#E8DDD3] mb-10 font-medium"
         >
           Cape Town, South Africa
         </motion.p>
@@ -34,7 +34,7 @@ export function EnhancedHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="font-serif text-6xl md:text-7xl lg:text-8xl text-white mb-9 leading-[1.1] font-light"
+          className="font-serif text-6xl md:text-7xl lg:text-8xl text-white mb-9 leading-[1.1] font-light drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
         >
           The baseline looks very
           <br />
@@ -45,7 +45,7 @@ export function EnhancedHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="text-xl text-[#E8DDD3] font-light tracking-[2px] mb-3"
+          className="text-xl text-white font-light tracking-[2px] mb-3"
         >
           Tennis in Paradise.
         </motion.p>
@@ -54,7 +54,7 @@ export function EnhancedHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className="font-serif text-lg italic text-[#E8DDD3]/60"
+          className="font-serif text-lg italic text-[#E8DDD3]/80"
         >
           Change your court. Change your life.
         </motion.p>

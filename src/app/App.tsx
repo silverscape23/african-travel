@@ -174,9 +174,12 @@ export default function App() {
 
       {/* Footer */}
       <footer className="bg-[#0F2430] text-center py-20 px-6">
-        <div className="text-[#E8DDD3] text-base tracking-[5px] uppercase font-bold mb-3">
+        <div className="text-[#E8DDD3] text-base tracking-[5px] uppercase font-bold mb-2">
           Wildcourt
         </div>
+        <p className="text-[9px] tracking-[2px] uppercase text-[#E8DDD3]/25 font-light mb-4">
+          A My African Travel experience
+        </p>
         <p className="font-serif text-base italic text-[#E8DDD3]/35 mb-10">
           Change your court. Change your life.
         </p>
