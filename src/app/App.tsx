@@ -177,12 +177,19 @@ export default function App() {
         <div className="text-[#E8DDD3] text-base tracking-[5px] uppercase font-bold mb-2">
           Wildcourt
         </div>
-        <p className="text-[9px] tracking-[2px] uppercase text-[#E8DDD3]/25 font-light mb-4">
+        <p className="text-[11px] tracking-[2px] uppercase text-[#E8DDD3]/45 font-light mb-4">
           A My African Travel experience
         </p>
-        <p className="font-serif text-base italic text-[#E8DDD3]/35 mb-10">
+        <p className="font-serif text-base italic text-[#E8DDD3]/35 mb-8">
           Change your court. Change your life.
         </p>
+        <div className="flex justify-center mb-10">
+          <img
+            src="/images/logo-my-african-travel.jpg"
+            alt="My African Travel"
+            className="h-12 rounded-sm grayscale brightness-150 opacity-35"
+          />
+        </div>
         <div className="w-12 h-px bg-[#C45D3E] mx-auto mb-10 opacity-40" />
         <ul className="flex justify-center gap-8 list-none mb-10">
           <li>

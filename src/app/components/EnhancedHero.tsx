@@ -20,7 +20,7 @@ export function EnhancedHero() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl px-6">
+      <div className="relative z-10 text-center max-w-5xl px-6 pt-24">
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,20 +54,24 @@ export function EnhancedHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className="font-serif text-lg italic text-[#E8DDD3]/80"
+          className="inline-block font-serif text-lg italic text-[#E8DDD3] bg-[#C45D3E]/10 backdrop-blur-sm px-6 py-2 rounded-full"
         >
           Change your court. Change your life.
         </motion.p>
 
         {/* Award Badges */}
-        <motion.img
-          src="/images/awards-white.png"
-          alt="The Telegraph: Most Beautiful City in the World 2025. Time Out: Best City in the World 2025."
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 0.75, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="mx-auto mt-10 w-[340px] md:w-[400px]"
-        />
+          className="mx-auto mt-10 w-[340px] md:w-[400px] h-[180px] md:h-[210px] overflow-hidden"
+        >
+          <img
+            src="/images/awards-white.png"
+            alt="The Telegraph: Most Beautiful City in the World 2025. Time Out: Best City in the World 2025."
+            className="w-full invert"
+          />
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
