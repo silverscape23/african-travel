@@ -1,0 +1,86 @@
+import { motion } from "motion/react";
+import { ChevronDown } from "lucide-react";
+
+export function EnhancedHero() {
+  return (
+    <section className="relative h-screen min-h-[750px] flex items-center justify-center overflow-hidden bg-[#0F2430]">
+      {/* Hero Image with Animation */}
+      <motion.div
+        className="absolute inset-0"
+        initial={{ scale: 1.05 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 20, ease: "easeOut" }}
+      >
+        <img
+          src="https://images.unsplash.com/photo-1636811773039-7b69f9081a98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB0ZW5uaXMlMjBjb3VydCUyMG9jZWFuJTIwdmlldyUyMENhcGUlMjBUb3dufGVufDF8fHx8MTc3MTQ0MjU2MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          alt="Tennis court with ocean view"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0F2430]/50 via-[#0F2430]/15 to-[#0F2430]/70" />
+      </motion.div>
+
+      {/* Content */}
+      <div className="relative z-10 text-center max-w-5xl px-6">
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="text-xs tracking-[6px] uppercase text-[#D4775C] mb-10 font-medium"
+        >
+          Cape Town, South Africa
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="font-serif text-6xl md:text-7xl lg:text-8xl text-white mb-9 leading-[1.1] font-light"
+        >
+          The baseline looks very
+          <br />
+          different <em className="italic text-[#D4775C]">in Africa.</em>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="text-xl text-[#E8DDD3] font-light tracking-[2px] mb-3"
+        >
+          Tennis in Paradise.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="font-serif text-lg italic text-[#E8DDD3]/60"
+        >
+          Change your court. Change your life.
+        </motion.p>
+      </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2.5"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.3 }}
+      >
+        <span className="text-[10px] tracking-[4px] uppercase text-white/30">Discover</span>
+        <motion.div
+          className="w-px h-12 bg-gradient-to-b from-[#C45D3E] to-transparent"
+          animate={{
+            opacity: [0.3, 1, 0.3],
+            scaleY: [0.6, 1, 0.6],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.div>
+    </section>
+  );
+}
