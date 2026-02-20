@@ -4,20 +4,25 @@ import { ChevronDown } from "lucide-react";
 export function EnhancedHero() {
   return (
     <section className="relative h-screen min-h-[750px] flex items-center justify-center overflow-hidden bg-[#0F2430]">
-      {/* Hero Image with Animation */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{ scale: 1.05 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 20, ease: "easeOut" }}
-      >
+      {/* Hero Video (desktop) / Image fallback (mobile) */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="https://images.unsplash.com/photo-1636811773039-7b69f9081a98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB0ZW5uaXMlMjBjb3VydCUyMG9jZWFuJTIwdmlldyUyMENhcGUlMjBUb3dufGVufDF8fHx8MTc3MTQ0MjU2MHww&ixlib=rb-4.1.0&q=80&w=1080"
+          className="hidden md:block h-full w-full object-cover"
+        >
+          <source src="/images/hero.webm" type="video/webm" />
+        </video>
         <img
-          src="https://images.unsplash.com/photo-1636811773039-7b69f9081a98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB0ZW5uaXMlMjBjb3VydCUyMG9jZWFuJTIwdmlldyUyMENhcGUlMjBUb3dufGVufDF8fHx8MTc3MTQ0MjU2MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src="https://images.unsplash.com/photo-1636811773039-7b69f9081a98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB0ZW5uaXMlMjBjb3VydCUyMG9jZWFuJTIwdmlldyUyMENhcGUlMjBUb3dufGVufDF8fHx8MTc3MTQ0MjU2MHww&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Tennis court with ocean view"
-          className="h-full w-full object-cover"
+          className="md:hidden h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0F2430]/70 via-[#0F2430]/50 to-[#0F2430]/80" />
-      </motion.div>
+      </div>
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-5xl px-6 pt-24">
