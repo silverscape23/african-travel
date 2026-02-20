@@ -58,6 +58,16 @@ export function EnhancedHero() {
         >
           Change your court. Change your life.
         </motion.p>
+
+        {/* Award Badges */}
+        <motion.img
+          src="/images/awards-white.png"
+          alt="The Telegraph: Most Beautiful City in the World 2025. Time Out: Best City in the World 2025."
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 0.75, y: 0 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="mx-auto mt-10 w-[340px] md:w-[400px]"
+        />
       </div>
 
       {/* Scroll Indicator */}
